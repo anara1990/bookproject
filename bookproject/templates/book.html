@@ -6,9 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
     <title>Book</title>
-    <!--<link rel="stylesheet" href="./index.css" /> -->
-    <link rel="stylesheet" href={% static 'styles/index.css' %} />
-    <!--<link rel="stylesheet" href="./checkbox.css" /> -->
+    <link rel="stylesheet" href={% static 'styles/book.css' %} />
     <link rel="stylesheet" href={% static 'styles/checkbox.css' %} />
 
 
@@ -68,24 +66,17 @@
             </form>
 
         </div>
-        <div class="todo_container">
 
+        <div class="book_container">
+
+            {% for book in book_list %}
+
+            <div class='book_item'>
             
-
-            <div class='todo_item'>
-                <div class="todo_item_header">
                     <h4>{{ book.text }}</h4>
-                </div>
-
-                <div class="todo_item_footer">
-                    <div class="action_buttons">
-                        <img src="{% static './icons/unmarked3.png' %}" />
-                        <img src="{% static './icons/delete.png' %}" />
-                    </div>
-                </div>
+                
             </div>
-            
-
+            {% endfor %}
         </div>
 
     </section>

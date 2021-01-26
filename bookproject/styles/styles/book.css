@@ -1,0 +1,57 @@
+section{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.create_container{
+    width: 80%;
+    border: 2px solid red;
+    padding: 10px;
+
+}
+.create_input{
+    padding: 12px 5px;
+    font-size: 18px;
+    width: 80%;
+}
+.create_button{
+    padding: 12px 20px;
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.create_button:active {
+    border: 1px solid #f34141;
+    box-shadow: 2px  2px 5px 3px #faf4fc;
+}
+.book_container{
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 2px solid black;
+}
+.book_item{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 24%;
+    padding: 10px 15px;
+    background-color: rgb(178, 247, 139);
+    margin-bottom: 20px;
+    height: 80px;
+}
+
+.book_item h4{
+    font-size: 18px;
+    font-family: sans-serif;
+
+}

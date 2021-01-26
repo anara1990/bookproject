@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse,redirect
 from .models import Book
 
 def test(request):
-    todo_list = Book.objects.all()
+    book_list = Book.objects.all()
     return render(request, "book.html", {"book_list": book_list})
 
 
