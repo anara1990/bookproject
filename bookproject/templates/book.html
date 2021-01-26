@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Book</title>
+    <!--<link rel="stylesheet" href="./index.css" /> -->
+    <link rel="stylesheet" href={% static 'styles/index.css' %} />
+    <!--<link rel="stylesheet" href="./checkbox.css" /> -->
+    <link rel="stylesheet" href={% static 'styles/checkbox.css' %} />
+
+
+</head>
+
+<body>
+
+    <section>
+        <div class="create_container">
+            <form action="{% url 'add-book' %}" method="POST">
+                {% csrf_token %}
+                <input class="create_input" type="text" placeholder="Заголовок" 
+                name="book_text">
+                <button class="create_button">Добавить</button>
+            </form>
+            <form action="{% url 'add-book' %}" method="POST">
+                {% csrf_token %}
+                <input class="create_input" type="text" placeholder="Подзаголовок" 
+                name="book_text">
+                <button class="create_button">Добавить</button>
+            </form>
+            <form action="{% url 'add-book' %}" method="POST">
+                {% csrf_token %}
+                <input class="create_input" type="text" placeholder="Описание" 
+                name="book_text">
+                <button class="create_button">Добавить</button>
+            </form>
+            <form action="{% url 'add-book' %}" method="POST">
+                {% csrf_token %}
+                <input class="create_input" type="number" placeholder="Цена" 
+                name="book_text">
+                <button class="create_button">Добавить</button>
+            </form>
+            <form action="{% url 'add-book' %}" method="POST">
+                {% csrf_token %}
+                <input class="create_input" type="text" placeholder="Жанр" 
+                name="book_text">
+                <button class="create_button">Добавить</button>
+            </form>
+            <form action="{% url 'add-book' %}" method="POST">
+                {% csrf_token %}
+                <input class="create_input" type="text" placeholder="Автор" 
+                name="book_text">
+                <button class="create_button">Добавить</button>
+            </form>
+            <form action="{% url 'add-book' %}" method="POST">
+                {% csrf_token %}
+                <input class="create_input" type="number" placeholder="Год выхода книги" 
+                name="book_text">
+                <button class="create_button">Добавить</button>
+            </form>
+            <form action="{% url 'add-book' %}" method="POST">
+                {% csrf_token %}
+                <input class="create_input" type="number" placeholder="Добавление книги на сайт" 
+                name="book_text">
+                <button class="create_button">Добавить</button>
+            </form>
+
+        </div>
+        <div class="todo_container">
+
+            
+
+            <div class='todo_item'>
+                <div class="todo_item_header">
+                    <h4>{{ book.text }}</h4>
+                </div>
+
+                <div class="todo_item_footer">
+                    <div class="action_buttons">
+                        <img src="{% static './icons/unmarked3.png' %}" />
+                        <img src="{% static './icons/delete.png' %}" />
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+    </section>
+</body>
+
+</html>
